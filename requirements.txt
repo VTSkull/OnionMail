@@ -1,0 +1,9 @@
+Flask==2.0.2
+requests==2.27.1
+gnupg==2.3.2
+MarkupSafe==2.0.1
+json==2.0.9
+os==2.0.1
+subprocess==2.0.1
+re==2.2.1
+tor==0.4.7.10
