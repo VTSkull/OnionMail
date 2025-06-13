@@ -3,7 +3,7 @@
 # OnionMail
 
 
-OnionMail is a secure and anonymous email service that utilizes the Tor network and PGP encryption to protect user communications.
+OnionMail is a secure and anonymous message service that utilizes the Tor network and PGP encryption to protect user communications.
 
 ## Table of Contents
 
@@ -113,4 +113,4 @@ OnionMail follows the standard code of conduct for open source projects. Please 
 
 ### License
 
-OnionMail is licensed under the MIT License.
+OnionMail is licensed under the CC BY-NC License.
