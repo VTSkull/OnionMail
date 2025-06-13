@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OnionMail</title>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="title"><h1 id="onion">Onion</h1><h1 id="mail">Mail</h1></div>
+            <div id="send">
+                <form action="/send" method="post">
+                    <label for="returnAddress">Return Address:</label>
+                    <input type="text" id="returnAddress" name="returnAddress">
+                    <label for="toAddress">To:</label>
+                    <input type="text" id="toAddress" name="toAddress" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div id="messages">
+                <h2>Messages</h2>
+                <div id="messages">
+                    {{ added_messages }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+html, body {
+    height: auto;
+    width: 100%;
+}
+#title {
+    display:flex;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3949;
+}
+#container {
+    display:flex;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #aa9cfd48;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+#onion {
+    color:#b700ff;
+    font-size: 2em;
+    font-weight: bold;
+}
+#mail {
+    color: #02b7ff;
+    font-size: 2em;
+    font-weight: bold;
+}
+#messages {
+    margin-top: 20px;
+    width: 100%;
+}
+#messages h2 {
+    text-align: center;
+    color: #7a128f;
+}
+.messageContainer {
+    background-color: #ffffff;
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #7a128f;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #7a128f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
